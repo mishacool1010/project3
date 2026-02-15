@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Общие отступы для всего контента */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+header {
+    background-color: rgb(116, 38, 226);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+header b {
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+header a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Навигация */
+nav {
+    background-color: rgb(116, 38, 226);
+    border-radius: 10px;
+    margin: 20px 20px 30px 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+nav a:active {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Главный заголовок */
+main h1 {
+    color: #27ae60;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Подзаголовки (h2) — выделяем цветом */
+main h2 {
+    color: rgb(116, 38, 226);
+    border-left: 4px solid rgb(116, 38, 226);
+    padding-left: 12px;
+    margin: 40px 0 20px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Основной текст — минимум 20px */
+main p {
+    font-size: 1.25rem; /* 20px при base 16px */
+    margin: 12px 0;
+    color: #333;
+}
+
+main i {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Раздел "Продукция" — карточки товаров */
+#price {
+    margin-top: 40px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.product-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.product-item p {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Ссылки в контенте — оформляем стильно */
+main a {
+    color: rgb(116, 38, 226);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+    font-weight: 500;
+}
+
+main a:hover {
+    border-color: rgb(116, 38, 226);
+    color: rgb(80, 20, 160);
+}
+
+main a:active {
+    color: rgb(50, 10, 120);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+footer #contacts {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    header, nav {
+        margin: 15px;
+        padding: 12px 15px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.6rem;
+    }
+
+    main p {
+        font-size: 1.1rem;
+    }
+
+    .product-list {
+        gap: 15px;
+    }
+
+    .product-item {
+        width: 100%;
+        max-width: 260px;
+    }
